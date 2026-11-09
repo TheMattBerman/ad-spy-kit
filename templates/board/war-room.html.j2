@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>{{ competitor_name }} · Teardown board</title>
+<style>
+{% include 'board/war-room-tokens.css' %}
+</style></head>
+<body class="board-root">
+<header class="hdr">
+  <div class="eyebrow">
+    <span class="brand">{{ competitor_name }}</span>
+    {% if sample_chip %}<span class="pill src">{{ sample_chip|upper }}</span>{% endif %}
+    {% if thin_signal %}<span class="pill warn">ONLY {{ cleared_count }} AD{{ '' if cleared_count == 1 else 'S' }} CLEARED THE BAR</span>{% endif %}
+    {% if hidden_count %}<span class="pill">{{ hidden_count }} NEWER AD{{ '' if hidden_count == 1 else 'S' }} NOT SHOWN</span>{% endif %}
+  </div>
+  <h1 class="verdict"><span class="line bottom">{{ title_line }}</span></h1>
+</header>
+{# A headline wider than the board shrinks to fit (down to 36px) instead of being cut off. #}
+<script>(function(){var h=document.querySelector('h1.verdict');if(!h)return;var fs=58;while(h.scrollWidth>h.clientWidth&&fs>36){fs-=2;h.style.fontSize=fs+'px';}})();</script>
+
+{# [data-fit="N"]: text taller than N px shrinks (to 14px at most) instead of being cut mid-sentence. #}
+<script>window.addEventListener('load',function(){document.querySelectorAll('[data-fit]').forEach(function(el){var max=+el.dataset.fit;if(el.dataset.fit==='counter'){var cta=document.querySelector('.counter .cad-cta'),why=document.querySelector('.counter .cad-why');max=cta.getBoundingClientRect().top-el.getBoundingClientRect().top-(why?why.offsetHeight+5:0)-6;}var fs=parseFloat(getComputedStyle(el).fontSize);var min=+(el.dataset.min||14);while(el.scrollHeight>max&&fs>min){fs-=1;el.style.fontSize=fs+'px';}if(el.scrollHeight>max){el.style.maxHeight=max+'px';el.style.overflow='hidden';}});});</script>
+
+<section class="counters">
+  <div class="ctr blk"><div class="k">ads checked</div><div class="v">{{ ads_checked }}</div></div>
+  <div class="ctr blk"><div class="k">{{ live_30_label }}</div><div class="v">{{ live_30 }}</div></div>
+  <div class="ctr"><div class="k">longest run</div><div class="v">{{ longest_days }}<small> {{ longest_unit }}</small></div></div>
+  <div class="ctr labels"><div class="k">labels on the board</div><div class="v">{% for label, n in label_counts %}<span class="lc"><b>{{ n }}</b><em class="lab {{ label }}">{{ label }}</em></span>{% endfor %}</div></div>
+</section>
+
+<div class="main-grid">
+  <div class="top-row">
+    <div class="card wall-card">
+      <div class="ttl"><b>{{ wall_title }}</b><span class="n">days each has run</span></div>
+      <div class="ads">
+        {% for w in winner_wall %}
+        <div class="ad{% if loop.first %} lead{% endif %}">
+          <div class="thumb f-{{ w.frame|replace(':', 'x') }}{% if w.is_video %} vid{% endif %}{% if w.tiny_preview %} tiny{% endif %}" style="aspect-ratio:{{ w.frame_css }}">
+            {% if w.image_b64 %}<img src="{{ w.image_b64 }}" alt="" />{% endif %}
+            {% if w.is_video %}<span class="play" aria-label="video">▶</span>{% endif %}
+            {% if w.catalog %}<span class="cat-badge">catalog ad</span>{% endif %}
+          </div>
+          <div class="cap">
+            <div class="row">{% if loop.first %}<span class="rank">#{{ '%02d'|format(w.display_rank) }}</span>{% endif %}{% if w.strength_label %}<em class="lab {{ w.strength_label }}">{{ w.strength_label }}</em>{% endif %}<span class="days">{{ w.days_live }}d</span></div>
+            {% if loop.first %}
+            {% if w.hook_text %}<span class="q" data-fit="{{ 150 if (w.cta or w.landing_domain) else 168 }}"><em class="src src-{{ w.hook_source }}">{{ w.hook_tag }}</em> "{{ w.hook_text }}"</span>{% else %}<span class="nq">{{ w.no_copy_note }}</span>{% endif %}
+            {% if w.versions >= 2 %}<span class="why">{{ w.versions }} versions{% if w.versions_differ %}, different captions{% endif %}</span>{% endif %}
+            {% if w.cta or w.landing_domain %}<span class="dest">{% if w.cta %}{{ w.cta }}{% endif %}{% if w.cta and w.landing_domain %} → {% endif %}{{ w.landing_domain }}</span>{% endif %}
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="col col-mid">
+    <div class="card exposed">
+      <div class="ttl"><b>The opening</b></div>
+      {% for g in opening %}
+      <div class="exp-h">{{ g.big|keep_words }}</div>
+      {% endfor %}
+      <div class="nums">
+        {% for g in opening %}{% if g.mention_count %}<div class="num"><span class="big">{{ g.mention_count }}</span><em class="lab">mention it</em></div>{% endif %}{% endfor %}
+        {% if deepest_offer %}<div class="num"><span class="big">{{ deepest_offer.discount_depth }}</span><em class="lab">top discount</em></div>{% endif %}
+      </div>
+    </div>
+    <div class="card counter">
+      <div class="ttl"><b>Your counter-ad</b>{% for c in counters[:1] %}{% if rank_of.get(c.beats_ad_id) %}<span class="n">different from {{ rank_of[c.beats_ad_id] }}</span>{% endif %}{% endfor %}</div>
+      {% for c in counters[:1] %}
+      <div class="cad">
+        {% if counter_assets.get(c.gap_ref|string) %}
+        <img class="cad-img" src="{{ counter_assets[c.gap_ref|string] }}" alt="counter"/>
+        {% endif %}
+        <div class="cad-txt">
+          <p class="cad-hook" data-fit="counter" data-min="19">"{{ c.hook|keep_words }}"</p>
+          <p class="cad-why">{{ c.why_it_beats|truncate(150, False, '…') }}</p>
+        </div>
+      </div>
+      {% endfor %}
+      <a class="cad-cta" href="https://stealads.ai">First ad free, early access · stealads.ai</a>
+    </div>
+    {% if ad_wall %}
+    <div class="card all-ads">
+      <div class="ttl"><b>{{ wall_caption }}</b></div>
+      <div class="tiles">{% for t in ad_wall %}<img class="tile t-{{ t.label or 'none' }}" src="{{ t.image_b64 }}" alt="" />{% endfor %}</div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="footrow">
+  <footer class="foot">
+    <span>{{ data_line }} · <a href="https://stealads.ai">stealads.ai</a></span>
+  </footer>
+</div>
+
+{# Carousel slices (1080×1350 crops). A slice with nothing to show is skipped, never drawn blank. #}
+{% for sl in slices %}
+<section id="slice-{{ '%02d'|format(loop.index) }}" class="slice">
+  <div class="slice-inner">
+    <div class="slice-tag">{{ competitor_name }} · {{ sl.title }}</div>
+    {% if sl.key == 'summary' %}
+    <div class="slice-h2">{{ title_line }}</div>
+    {% if headline_top %}<div class="slice-top">{{ headline_top }}</div>{% endif %}
+    <div class="slice-ctrs">
+      <div class="ctr blk"><div class="k">ads checked</div><div class="v">{{ ads_checked }}</div></div>
+      <div class="ctr blk"><div class="k">{{ live_30_label }}</div><div class="v">{{ live_30 }}</div></div>
+      <div class="ctr"><div class="k">longest run</div><div class="v">{{ longest_days }}<small> {{ longest_unit }}</small></div></div>
+    </div>
+    {% if slice_tiles %}<div class="slice-tiles" style="grid-template-columns: repeat({{ slice_tile_cols }}, 1fr)">{% for t in slice_tiles %}<img class="tile" src="{{ t.image_b64 }}" alt="" />{% endfor %}</div>{% endif %}
+    {% elif sl.key == 'wall' %}
+    <div class="slice-wall">
+    {% for w in winner_wall[:6] %}
+      <div class="slice-card">
+        <div class="thumb f-{{ w.frame|replace(':', 'x') }}{% if w.is_video %} vid{% endif %}{% if w.tiny_preview %} tiny{% endif %}" style="aspect-ratio:{{ w.frame_css }}">
+          {% if w.image_b64 %}<img src="{{ w.image_b64 }}" alt="" />{% endif %}
+          {% if w.is_video %}<span class="play" aria-label="video">▶</span>{% endif %}
+          {% if w.catalog %}<span class="cat-badge">catalog ad</span>{% endif %}
+        </div>
+        <div class="slice-cap"><div class="row"><b>#{{ '%02d'|format(w.display_rank) }}</b>{% if w.strength_label %}<em class="lab {{ w.strength_label }}">{{ w.strength_label }}</em>{% endif %}<span class="days">{{ w.days_live }}d</span></div>{% if w.hook_text %}<span class="q" data-fit="100">"{{ w.hook_text }}"</span>{% else %}<span class="nq">{{ w.no_copy_note }}</span>{% endif %}{% if w.versions >= 2 %}<div class="slice-sub">{{ w.versions }} versions{% if w.versions_differ %}, different captions{% endif %}</div>{% endif %}{% if w.cta or w.landing_domain %}<div class="slice-sub slice-dest">{% if w.cta %}{{ w.cta }}{% endif %}{% if w.cta and w.landing_domain %} → {% endif %}{{ w.landing_domain }}</div>{% endif %}</div>
+      </div>
+    {% endfor %}
+    </div>
+    {% if hidden_count %}<div class="slice-line slice-hidden">{{ hidden_count }} newer ad{{ '' if hidden_count == 1 else 's' }} not shown: none has run a week yet.</div>{% endif %}
+    {% elif sl.key == 'offers' %}
+    {% if deepest_offer %}<div class="slice-big">{{ deepest_offer.discount_depth }}</div><div class="slice-kicker">biggest discount{% if rank_of.get(deepest_offer.ad_id) %} · {{ rank_of[deepest_offer.ad_id] }}{% endif %}</div>{% endif %}
+    {% for o in offers_shown[:offer_rows] %}<div class="slice-line offer-row n{{ offer_rows }}">{% if o.thumb %}<img class="offer-thumb" src="{{ o.thumb }}" alt="" />{% endif %}<div class="offer-txt"><span class="q">"{{ o.evidence }}"</span><div class="slice-sub slice-ometa">{% if o.discount_depth %}{{ o.discount_depth }} · {% endif %}{{ offer_labels.get(o.offer_type, o.offer_type) }} · {{ o.evidence_tag }}{% if rank_of.get(o.ad_id) %} · {{ rank_of[o.ad_id] }}{% endif %}{% for r in o.also %}, {{ r }}{% endfor %}</div></div></div>{% endfor %}
+    {% elif sl.key == 'opening' %}
+    {% for g in opening %}<div class="slice-h2">{{ g.gap }}</div><div class="slice-sub slice-meta">based on {% for id in g.evidence_ad_ids %}{{ rank_of.get(id, '') }} {% endfor %}</div>{% if g.counter_angle %}<div class="slice-line">Your angle: {{ g.counter_angle }}</div>{% endif %}{% endfor %}
+    {% if opening_thumbs %}
+    <div class="slice-kicker">checked against</div>
+    <div class="slice-evi" style="grid-template-columns: repeat({{ evi_cols }}, 1fr)">{% for t in opening_thumbs %}<div class="evi"><img src="{{ t.image_b64 }}" alt="" /><b>{{ t.rank }}</b></div>{% endfor %}</div>
+    {% endif %}
+    {% else %}
+    {% for c in counters[:1] %}<div class="slice-h2 cs-head" data-fit="360">{{ c.headline }}</div><div class="slice-line cs-hook"><span class="slice-sub">The hook</span><span class="cs-q" data-fit="300">"{{ c.hook }}"</span></div><div class="slice-line cs-row"><span class="slice-sub">What to show</span><span class="cs-t" data-fit="230">{{ c.visual_direction }}</span></div><div class="slice-line cs-row"><span class="slice-sub">Why it's different from {{ rank_of.get(c.beats_ad_id, 'theirs') }}</span><span class="cs-t" data-fit="230">{{ c.why_it_beats }}</span></div>{% endfor %}
+    <a class="cad-cta slice-cta" href="https://stealads.ai">StealAds can turn this brief into a finished ad. Your first one is free (early access at stealads.ai)</a>
+    {% endif %}
+    <div class="slice-note">{{ foot_note }}</div>
+    <div class="slice-handle">{{ data_line }} · <a href="https://stealads.ai">stealads.ai</a></div>
+  </div>
+</section>
+{% endfor %}
+</body></html>

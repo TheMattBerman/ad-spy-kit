@@ -1,0 +1,28 @@
+{
+  "counters": [
+    {
+      "gap_ref": 2,
+      "beats_ad_id": "27ba1684-9218-4a9d-9aee-d50003d1badb",
+      "angle": "Risk-free trial first",
+      "headline": "Full refund, first line",
+      "hook": "Full refund if your mornings don't change.",
+      "offer": "Money-back trial stated in the first line",
+      "visual_direction": "Hand holding a mug beside a handwritten note reading FULL REFUND, soft daylight",
+      "why_it_beats": "Two of these ads mention the 60-day guarantee, both late, and neither leads with it. This one does.",
+      "aspect": "4:5",
+      "status": "brief"
+    },
+    {
+      "gap_ref": 0,
+      "beats_ad_id": "8873b3b7-6fb2-4e18-b436-442268ff1477",
+      "angle": "Black Friday stock-up",
+      "headline": "Black Friday stock-up",
+      "hook": "Black Friday: stock up on your morning focus.",
+      "offer": "Black Friday stock-up bundle, named in line one",
+      "visual_direction": "Three pouches stacked on a kitchen counter at sunrise, bold BLACK FRIDAY STOCK-UP headline",
+      "why_it_beats": "Their #01 ad says 58% off in the video, but none of these ads name Black Friday, said or written. This one puts the sale in the first line.",
+      "aspect": "4:5",
+      "status": "brief"
+    }
+  ]
+}

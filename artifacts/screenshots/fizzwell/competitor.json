@@ -1,0 +1,14 @@
+{
+  "query": "fizzwell soda",
+  "competitor_id": "cmp_fizzwell_fixture",
+  "brand_id": "brand_fixture",
+  "page_id": "334455667",
+  "page_name": "Fizzwell",
+  "ig_username": "drinkfizzwell",
+  "followers": 268000,
+  "country": "US",
+  "confidence": "exact",
+  "alternates": [],
+  "tracked": false,
+  "source": "fixture"
+}

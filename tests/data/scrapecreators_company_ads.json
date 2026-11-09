@@ -1,0 +1,38 @@
+{
+  "_note": "Shape of GET /v1/facebook/adLibrary/company/ads?trim=false results, trimmed to the fields the adapter reads. Values are invented; keys follow the WCT/CIE live_capture tests.",
+  "results": [
+    {
+      "ad_archive_id": "sc-1",
+      "is_active": true,
+      "start_date": 1759276800,
+      "collation_count": 4,
+      "collation_id": 998877,
+      "url": "https://www.facebook.com/ads/library?id=sc-1",
+      "snapshot": {
+        "page_name": "Example Wallet Co",
+        "display_format": "IMAGE",
+        "title": "Holiday sets ship free",
+        "body": {"text": "Gift the wallet that lasts. 30% off sets through Cyber Monday."},
+        "cta_text": "Shop Now",
+        "link_url": "https://example.com/gifts?utm_source=fb",
+        "images": [{"resized_image_url": "https://scontent.example-fbcdn.net/sc-1.jpg"}],
+        "videos": [],
+        "cards": []
+      }
+    },
+    {
+      "ad_archive_id": "sc-2",
+      "is_active": false,
+      "start_date": 1756684800,
+      "end_date": 1757894400,
+      "collation_count": 1,
+      "snapshot": {
+        "display_format": "VIDEO",
+        "title": "",
+        "body": {"text": "Watch the drop test."},
+        "videos": [{"video_hd_url": "https://video.example-fbcdn.net/sc-2.mp4"}],
+        "cards": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "fixture": "dewbar",
+  "source": "stealads",
+  "rank_source": "find_bangers",
+  "winners": [
+    "ad-1",
+    "ad-2",
+    "ad-3",
+    "ad-4",
+    "ad-5",
+    "ad-6"
+  ],
+  "dropped_no_media": [],
+  "hash": "4bb9cda15ed4",
+  "replayed_at": "2026-11-06T00:21:04.015521+00:00"
+}

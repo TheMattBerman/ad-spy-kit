@@ -1,0 +1,198 @@
+{
+  "competitor_id": "cmp_fizzwell_fixture",
+  "pulled_at": "2026-10-28T18:00:00Z",
+  "ads": [
+    {
+      "id": "ad-1",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-1",
+      "start_date": "2026-09-01",
+      "headline": "Black Friday: 30% off every 12-pack, today only",
+      "body_text": "Black Friday: 30% off every 12-pack, today only.",
+      "original_cta": "Shop Now",
+      "link_url": "https://fizzwell.example/shop",
+      "format": "VIDEO",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 29,
+      "variation_count": 9,
+      "banger_band": "banger",
+      "why": "Live 29 days \u00b7 9 versions \u00b7 still running",
+      "group_id": "meta-fz-001",
+      "media": [
+        {
+          "url": "fixture://ad-1.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-2",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-2",
+      "start_date": "2026-09-01",
+      "headline": "Subscribe and save 15% forever",
+      "body_text": "Subscribe and save 15% forever. Cancel anytime.",
+      "original_cta": "Shop Now",
+      "link_url": "https://fizzwell.example/shop",
+      "format": "IMAGE",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 33,
+      "variation_count": 7,
+      "banger_band": "banger",
+      "why": "Live 33 days \u00b7 7 versions \u00b7 still running",
+      "group_id": "meta-fz-002",
+      "media": [
+        {
+          "url": "fixture://ad-2.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-3",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-3",
+      "start_date": "2026-09-01",
+      "headline": "Gift a variety pack: 12 flavors, one box",
+      "body_text": "Gift a variety pack: 12 flavors, one box.",
+      "original_cta": "Shop Now",
+      "link_url": "https://fizzwell.example/shop",
+      "format": "CAROUSEL",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 20,
+      "variation_count": 6,
+      "banger_band": "solid",
+      "why": "Live 20 days \u00b7 6 versions \u00b7 still running",
+      "group_id": "meta-fz-003",
+      "media": [
+        {
+          "url": "fixture://ad-3.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-4",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-4",
+      "start_date": "2026-09-01",
+      "headline": "Tastes like the soda you grew up on",
+      "body_text": "Tastes like the soda you grew up on. 2g sugar.",
+      "original_cta": "Shop Now",
+      "link_url": "https://fizzwell.example/shop",
+      "format": "VIDEO",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 17,
+      "variation_count": 4,
+      "banger_band": "solid",
+      "why": "Live 17 days \u00b7 4 versions \u00b7 still running",
+      "group_id": "meta-fz-004",
+      "media": [
+        {
+          "url": "fixture://ad-4.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-5",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-5",
+      "start_date": "2026-09-01",
+      "headline": "Doorbuster: free shipping on any 2 packs",
+      "body_text": "Doorbuster: free shipping on any 2 packs.",
+      "original_cta": "Shop Now",
+      "link_url": "https://fizzwell.example/shop",
+      "format": "IMAGE",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 13,
+      "variation_count": 3,
+      "banger_band": "testing",
+      "why": "Live 13 days \u00b7 3 versions \u00b7 still running",
+      "group_id": "meta-fz-005",
+      "media": [
+        {
+          "url": "fixture://ad-5.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-6",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-6",
+      "start_date": "2026-09-01",
+      "headline": "Early access: the Cyber Monday flavor drop",
+      "body_text": "Early access: the Cyber Monday flavor drop.",
+      "original_cta": "Shop Now",
+      "link_url": "https://fizzwell.example/shop",
+      "format": "IMAGE",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 8,
+      "variation_count": 3,
+      "banger_band": "testing",
+      "why": "Live 8 days \u00b7 3 versions \u00b7 still running",
+      "group_id": "meta-fz-006",
+      "media": [
+        {
+          "url": "fixture://ad-6.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-7",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-7",
+      "start_date": "2026-09-01",
+      "headline": "Meet Cherry Cola",
+      "body_text": "Meet Cherry Cola.",
+      "original_cta": "Shop Now",
+      "link_url": "https://fizzwell.example/shop",
+      "format": "IMAGE",
+      "is_active": true,
+      "still_running": false,
+      "run_duration_days": 4,
+      "variation_count": 1,
+      "banger_band": "testing",
+      "why": null,
+      "group_id": null,
+      "media": [
+        {
+          "url": "fixture://ad-7.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-8",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-8",
+      "start_date": "2026-09-01",
+      "headline": "Ends tonight: 30% off",
+      "body_text": "Ends tonight: 30% off.",
+      "original_cta": "Shop Now",
+      "link_url": "https://fizzwell.example/shop",
+      "format": "IMAGE",
+      "is_active": true,
+      "still_running": false,
+      "run_duration_days": 2,
+      "variation_count": 1,
+      "banger_band": "testing",
+      "why": null,
+      "group_id": null,
+      "media": [
+        {
+          "url": "fixture://ad-8.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    }
+  ]
+}

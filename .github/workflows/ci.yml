@@ -1,0 +1,23 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test-and-replay:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: uv sync --group dev
+      - run: uv run python scripts/gen_fixtures.py
+      - run: uv run playwright install --with-deps chromium
+      - run: uv run ad-spy-kit replay-all
+      - run: uv run pytest -q
+      - run: bash evals/compare-baseline.sh
+      - run: bash evals/run-kit-review.sh cached

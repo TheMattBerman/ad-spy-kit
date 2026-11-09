@@ -1,0 +1,120 @@
+{
+  "competitor": "Foldbrook",
+  "headline": {
+    "top": "Foldbrook has 4 Black Friday ads still running.",
+    "bottom": "None of them sell the gift."
+  },
+  "stats": [
+    {
+      "label": "Ads checked",
+      "value": "8",
+      "sub": "checked Oct 28",
+      "tone": "g"
+    },
+    {
+      "label": "Kept running",
+      "value": "6",
+      "sub": "7+ days or 3+ versions",
+      "tone": "g"
+    },
+    {
+      "label": "Avg days",
+      "value": "24",
+      "sub": "ads on the board",
+      "tone": "n"
+    },
+    {
+      "label": "Max off",
+      "value": "47%",
+      "sub": "caption of #01",
+      "tone": "g"
+    }
+  ],
+  "offer_map": [
+    {
+      "ad_id": "ad-1",
+      "offer_type": "pct_off",
+      "discount_depth": "47%",
+      "urgency": "countdown",
+      "early_access": false,
+      "evidence": "47% off"
+    },
+    {
+      "ad_id": "ad-3",
+      "offer_type": "early_access",
+      "discount_depth": "VIP",
+      "urgency": "date",
+      "early_access": true,
+      "evidence": "VIP early access"
+    }
+  ],
+  "hooks": [
+    {
+      "ad_id": "ad-1",
+      "hook_text": "I've carried the same wallet for six years.",
+      "pattern": "story",
+      "puppet_string": "wealth",
+      "fear_amplifier": false,
+      "triggers": [
+        {
+          "name": "scarcity",
+          "strength": "heavy"
+        }
+      ],
+      "hook_source": "spoken"
+    },
+    {
+      "ad_id": "ad-2",
+      "hook_text": "The last wallet you'll ever buy",
+      "pattern": "contrast",
+      "puppet_string": "status-access",
+      "fear_amplifier": false,
+      "triggers": [
+        {
+          "name": "contrast",
+          "strength": "moderate"
+        }
+      ],
+      "hook_source": "onscreen"
+    }
+  ],
+  "formats": [
+    {
+      "format": "faceless-demo",
+      "count": 2,
+      "days_live_sum": 56,
+      "verdict": "sat"
+    },
+    {
+      "format": "native-photo-long-copy",
+      "count": 3,
+      "days_live_sum": 71,
+      "verdict": "dead"
+    },
+    {
+      "format": "carousel",
+      "count": 1,
+      "days_live_sum": 19,
+      "verdict": "open"
+    }
+  ],
+  "gaps": [
+    {
+      "gap": "None of their ads frame Foldbrook as a holiday gift",
+      "evidence_ad_ids": [
+        "ad-1",
+        "ad-2"
+      ],
+      "gap_score": 8,
+      "counter_angle": "A gift they still carry every day in January"
+    }
+  ],
+  "steal_this": [
+    {
+      "ad_id": "ad-2",
+      "template": "Sell it as the last one they'll ever need to buy.",
+      "dont_copy": "Skip a 47% off headline. Big discounts are what they're known for."
+    }
+  ],
+  "citations_ok": true
+}

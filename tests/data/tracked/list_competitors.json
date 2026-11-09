@@ -1,0 +1,43 @@
+{
+ "competitors": [
+  {
+   "id": "9d5497b6-4874-4ee3-a52a-d12e9028c57c",
+   "brand_id": "7ee8d87b-b692-4b40-921c-925721b64bc1",
+   "name": "True Classic",
+   "facebook_page_id": "661315797647911",
+   "page_url": "https://www.facebook.com/trueclassictees",
+   "country_code": "US",
+   "created_at": "2026-10-21T15:31:56.411Z",
+   "updated_at": "2026-11-03T21:59:27.375Z",
+   "last_checked": "2026-11-05T05:38:24.363Z",
+   "is_active": true,
+   "ads_tracked": 201
+  },
+  {
+   "id": "fb741589-8dbd-44e8-9b3f-758f4e37efe6",
+   "brand_id": "7ee8d87b-b692-4b40-921c-925721b64bc1",
+   "name": "Ridge",
+   "facebook_page_id": "176366735873065",
+   "page_url": "https://www.facebook.com/ridge",
+   "country_code": "US",
+   "created_at": "2026-10-21T15:32:32.045Z",
+   "updated_at": "2026-11-03T21:48:51.155Z",
+   "last_checked": "2026-11-05T07:13:49.272Z",
+   "is_active": true,
+   "ads_tracked": 876
+  },
+  {
+   "id": "55fa47d3-da1f-4a40-88dd-06c6f34ebbb1",
+   "brand_id": "7ee8d87b-b692-4b40-921c-925721b64bc1",
+   "name": "Quince",
+   "facebook_page_id": "2240844056196530",
+   "page_url": "https://www.facebook.com/Quince",
+   "country_code": "US",
+   "created_at": "2026-10-21T15:31:23.298Z",
+   "updated_at": "2026-11-03T21:48:35.577Z",
+   "last_checked": "2026-11-05T01:13:31.210Z",
+   "is_active": true,
+   "ads_tracked": 778
+  }
+ ]
+}

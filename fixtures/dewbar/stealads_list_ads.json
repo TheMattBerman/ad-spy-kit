@@ -1,0 +1,198 @@
+{
+  "competitor_id": "cmp_dewbar_fixture",
+  "pulled_at": "2026-10-28T18:00:00Z",
+  "ads": [
+    {
+      "id": "ad-1",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-1",
+      "start_date": "2026-09-01",
+      "headline": "Black Friday Glow Set: 3 full sizes for $58 ($84 value)",
+      "body_text": "Black Friday Glow Set: 3 full sizes for $58 ($84 value).",
+      "original_cta": "Shop Now",
+      "link_url": "https://dewbar.example/collections/sets",
+      "format": "VIDEO",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 34,
+      "variation_count": 11,
+      "banger_band": "banger",
+      "why": "Live 34 days \u00b7 11 versions \u00b7 still running",
+      "group_id": "meta-dew-001",
+      "media": [
+        {
+          "url": "fixture://ad-1.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-2",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-2",
+      "start_date": "2026-09-01",
+      "headline": "Free gift with every order over $40, through Cyber Monday",
+      "body_text": "Free gift with every order over $40, through Cyber Monday.",
+      "original_cta": "Shop Now",
+      "link_url": "https://dewbar.example/collections/sets",
+      "format": "IMAGE",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 27,
+      "variation_count": 8,
+      "banger_band": "banger",
+      "why": "Live 27 days \u00b7 8 versions \u00b7 still running",
+      "group_id": "meta-dew-002",
+      "media": [
+        {
+          "url": "fixture://ad-2.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-3",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-3",
+      "start_date": "2026-09-01",
+      "headline": "Join the VIP list: first pick of the holiday sets",
+      "body_text": "Join the VIP list: first pick of the holiday sets.",
+      "original_cta": "Shop Now",
+      "link_url": "https://dewbar.example/collections/sets",
+      "format": "IMAGE",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 21,
+      "variation_count": 5,
+      "banger_band": "solid",
+      "why": "Live 21 days \u00b7 5 versions \u00b7 still running",
+      "group_id": "meta-dew-003",
+      "media": [
+        {
+          "url": "fixture://ad-3.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-4",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-4",
+      "start_date": "2026-09-01",
+      "headline": "My skin barrier finally stopped flaking",
+      "body_text": "My skin barrier finally stopped flaking. Two jars in.",
+      "original_cta": "Shop Now",
+      "link_url": "https://dewbar.example/collections/sets",
+      "format": "VIDEO",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 18,
+      "variation_count": 4,
+      "banger_band": "solid",
+      "why": "Live 18 days \u00b7 4 versions \u00b7 still running",
+      "group_id": "meta-dew-004",
+      "media": [
+        {
+          "url": "fixture://ad-4.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-5",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-5",
+      "start_date": "2026-09-01",
+      "headline": "Dermatologist-tested",
+      "body_text": "Dermatologist-tested. Fragrance-free. Still $24.",
+      "original_cta": "Shop Now",
+      "link_url": "https://dewbar.example/collections/sets",
+      "format": "IMAGE",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 12,
+      "variation_count": 3,
+      "banger_band": "testing",
+      "why": "Live 12 days \u00b7 3 versions \u00b7 still running",
+      "group_id": "meta-dew-005",
+      "media": [
+        {
+          "url": "fixture://ad-5.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-6",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-6",
+      "start_date": "2026-09-01",
+      "headline": "Bundle any 3 minis, save 20%",
+      "body_text": "Bundle any 3 minis, save 20%.",
+      "original_cta": "Shop Now",
+      "link_url": "https://dewbar.example/collections/sets",
+      "format": "CAROUSEL",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 9,
+      "variation_count": 3,
+      "banger_band": "testing",
+      "why": "Live 9 days \u00b7 3 versions \u00b7 still running",
+      "group_id": "meta-dew-006",
+      "media": [
+        {
+          "url": "fixture://ad-6.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-7",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-7",
+      "start_date": "2026-09-01",
+      "headline": "New: overnight lip mask",
+      "body_text": "New: overnight lip mask.",
+      "original_cta": "Shop Now",
+      "link_url": "https://dewbar.example/collections/sets",
+      "format": "IMAGE",
+      "is_active": true,
+      "still_running": false,
+      "run_duration_days": 3,
+      "variation_count": 1,
+      "banger_band": "testing",
+      "why": null,
+      "group_id": null,
+      "media": [
+        {
+          "url": "fixture://ad-7.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-8",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-8",
+      "start_date": "2026-09-01",
+      "headline": "Shop the holiday sale now",
+      "body_text": "Shop the holiday sale now.",
+      "original_cta": "Shop Now",
+      "link_url": "https://dewbar.example/collections/sets",
+      "format": "IMAGE",
+      "is_active": true,
+      "still_running": false,
+      "run_duration_days": 2,
+      "variation_count": 1,
+      "banger_band": "testing",
+      "why": null,
+      "group_id": null,
+      "media": [
+        {
+          "url": "fixture://ad-8.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    }
+  ]
+}

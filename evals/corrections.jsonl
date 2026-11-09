@@ -1,0 +1,3 @@
+{"id": "001", "date": "2026-10-28", "rule": "must_not_contain", "pattern": "(?i)\\b(gap|opportunity)\\s*(score)?\\s*[:\\-]?\\s*\\d+(\\.\\d+)?\\s*/\\s*10\\b", "reason": "Matt: never show a numeric gap/opportunity score on board, slices or newsletter"}
+{"id": "002", "date": "2026-10-28", "rule": "must_not_contain", "pattern": "spend\\s*(is\\s*)?unknown|unknown\\s+spend|don[’']?t\\s+copy|do\\s+not\\s+copy", "reason": "Matt: 'spend unknown' and 'don't copy' are hedging copy; never render them"}
+{"id": "003", "date": "2026-10-28", "rule": "must_not_contain", "pattern": "(?i)live data \\+ counter-ads", "reason": "spec §14: footer CTA is the plain stealads.ai link, no upsell line"}

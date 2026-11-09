@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "competitor.schema.json",
+  "type": "object",
+  "required": ["query", "page_id", "page_name", "country", "confidence", "source"],
+  "properties": {
+    "query": { "type": "string" },
+    "competitor_id": { "type": ["string", "null"] },
+    "brand_id": { "type": ["string", "null"] },
+    "page_id": { "type": "string" },
+    "page_name": { "type": "string" },
+    "ig_username": { "type": ["string", "null"] },
+    "followers": { "type": "number" },
+    "country": { "type": "string" },
+    "confidence": { "enum": ["exact", "likely", "ambiguous"] },
+    "alternates": { "type": "array" },
+    "tracked": { "type": "boolean" },
+    "source": { "enum": ["stealads", "scrapecreators", "fixture"] }
+  },
+  "additionalProperties": true
+}

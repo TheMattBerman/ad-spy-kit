@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-10-28T18:05:00Z",
+  "source": "scrapecreators",
+  "synthetic": true,
+  "endpoint": "/v1/facebook/adLibrary/ad/transcript",
+  "cache_max_age": "7d",
+  "allow_long_transcription": false,
+  "items": [
+    {
+      "ad_id": "ad-1",
+      "facebook_ad_id": "ad-1",
+      "transcript": "",
+      "transcript_available": false,
+      "cached": false
+    },
+    {
+      "ad_id": "ad-4",
+      "facebook_ad_id": "ad-4",
+      "transcript": "Okay, two jars in and my skin barrier finally stopped flaking. I was using three products before this. Now it's one.",
+      "transcript_available": true,
+      "cached": true
+    }
+  ]
+}

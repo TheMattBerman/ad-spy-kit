@@ -1,0 +1,11 @@
+{
+  "name": "ad-spy-kit",
+  "owner": { "name": "Matthew Berman" },
+  "plugins": [
+    {
+      "name": "ad-spy-kit",
+      "source": "./",
+      "description": "Competitor Meta ad teardown: the ads they keep running, every hook and offer quoted, the opening none of them use, and counter-ad briefs."
+    }
+  ]
+}

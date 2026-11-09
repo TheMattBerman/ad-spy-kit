@@ -1,0 +1,48 @@
+{
+  "rule_version": "w2",
+  "rank_source": "find_bangers",
+  "thin_signal": false,
+  "winner_order": [
+    "ad-1",
+    "ad-2",
+    "ad-3",
+    "ad-4",
+    "ad-5",
+    "ad-6"
+  ],
+  "winner_why": {
+    "ad-1": "Live 41 days · 12 versions · still running",
+    "ad-2": "Live 38 days · 9 versions · still running",
+    "ad-3": "Live 22 days · 6 versions · still running",
+    "ad-4": "Live 19 days · 5 versions · still running",
+    "ad-5": "Live 15 days · 4 versions · still running",
+    "ad-6": "Live 11 days · 3 versions · still running"
+  },
+  "dupes_merged": {},
+  "quarantined": [
+    "ad-7",
+    "ad-8"
+  ],
+  "gap_order": [
+    "None of their ads frame Foldbrook as a holiday gift"
+  ],
+  "gap_citations": [
+    [
+      "ad-1",
+      "ad-2"
+    ]
+  ],
+  "citation_errors": [],
+  "hook_sources": {
+    "ad-1": "spoken",
+    "ad-2": "onscreen",
+    "ad-3": "copy",
+    "ad-4": "copy",
+    "ad-5": "copy",
+    "ad-6": "copy"
+  },
+  "analysis_hook_sources": {
+    "ad-1": "spoken",
+    "ad-2": "onscreen"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "recorded_at": "2026-10-29T05:51:04Z",
+  "source": "scrapecreators",
+  "endpoint": "/v1/facebook/adLibrary/ad/transcript",
+  "cache_max_age": "7d",
+  "allow_long_transcription": false,
+  "items": [
+    {
+      "ad_id": "8873b3b7-6fb2-4e18-b436-442268ff1477",
+      "facebook_ad_id": "1513163003271861",
+      "transcript": "Apology to everyone who bought Rainbow Dust from our videos. Yes, Rainbow Dust reduces your cortisol with clinically dosed KSM-66 ashwagandha. Yes, it rebuilds your focus and memory pathways with 1000 mg of Lion's Mane fruiting body extract. Yes, it gives you real cellular energy with cordyceps so the 2:00 PM crash disappears. Yes, it only has 80 mg of caffeine so it doesn't re-trigger the cortisol cycle coffee causes. Yes, it tastes delicious. Five flavors, one scoop, 30 seconds. But here's where we lied. We told everyone the best offer we could give was 40% off. That wasn't true. Our team made too many batches and we can't keep up in the warehouse. So right now, everyone gets up to 58% off plus five free gifts plus free express delivery. 60-day money-back guarantee. If you don't feel more focused and energized, we give your money back. This offer won't last. Grab it before the warehouse clears. Links below.",
+      "transcript_available": true,
+      "cached": false
+    },
+    {
+      "ad_id": "22e33100-8ac2-4f8e-b0a1-f855b4fec499",
+      "facebook_ad_id": "1352528872877345",
+      "transcript": "As this face because isn't just like a January reset, I absolutely love it. So if you want to test it out for yourself, I actually have a discount code for you guys. You can use Emily N to get 20% off their starter kit, which is what you see here. They have loads of different flavors and you still get that caffeine hit, but it's a natural caffeine so you don't get any jitters or crashes that you may have experienced in the past.",
+      "transcript_available": true,
+      "cached": false
+    },
+    {
+      "ad_id": "27ba1684-9218-4a9d-9aee-d50003d1badb",
+      "facebook_ad_id": "1023562560565075",
+      "transcript": "Want sharper focus, take lion's mane. Want steady all-day energy, take cordyceps. Feeling anxious and wired, take ashwagandha. Want better immune support, take chaga. Want better hormonal balance, take maca. Want clear thinking and less mental fatigue, take vitamin B5. Or forget all that and get Rainbow Dust by SpaceGoods instead. It's an adaptogen and functional mushroom blend that does all of it in one drink: calm, focus, real energy, less stress, better immunity, all in one scoop. There's no need to overspend on six different supplements when you can drink one instead. One scoop, 30 seconds, tastes like hot chocolate or smooth coffee, depending on the flavor. Five flavors in total, 60-day money-back guarantee, up to 58% off right now for new customers. The link's below.",
+      "transcript_available": true,
+      "cached": true,
+      "cached_at": "2026-10-27T03:59:44.000Z"
+    },
+    {
+      "ad_id": "1669bee7-7a56-4d6e-8edb-5ccea6316ac9",
+      "facebook_ad_id": "2102429927288102",
+      "transcript": "Right now, you can get a double discount on Rainbow Dust. Here's how you get it. Tap that link. That's going to give you, number one, 58% off already. Number two, free gifts will be waiting for you at the checkout. That's five extras on top of the discount. You do want to be quick though, because I did hear this deal ends tonight. Honestly, I just reordered mine because it's the only thing that works for focus long-term. Tap that link if you do not want to miss out.",
+      "transcript_available": true,
+      "cached": true,
+      "cached_at": "2026-10-27T01:56:55.000Z"
+    },
+    {
+      "ad_id": "90895e24-1e7f-45ab-ae23-5a9548eff96b",
+      "facebook_ad_id": "1105392432014961",
+      "transcript": "My husband replaced his morning coffee with Rainbow Dust and lost a stone without changing his diet. I was fuming with jealousy. 40 pounds for mushrooms? Then I saw the 50% off. Cheaper than my weekly takeaway, and he's not knackered by mid-afternoon. Just grab one for me, too. Link below. Be quick.",
+      "transcript_available": true,
+      "cached": false
+    }
+  ],
+  "recorded_from": "ScrapeCreators /v1/facebook/adLibrary/ad/transcript, live call",
+  "note": "Meta ad ids come from the StealAds image filenames. 3 live transcriptions (1 credit each) + 2 served from ScrapeCreators' cache (0 credits).",
+  "credits_charged": 3
+}

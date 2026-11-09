@@ -1,0 +1,16 @@
+{
+  "fixture": "live/spacegoods",
+  "source": "stealads",
+  "rank_source": "find_bangers",
+  "winners": [
+    "8873b3b7-6fb2-4e18-b436-442268ff1477",
+    "22e33100-8ac2-4f8e-b0a1-f855b4fec499",
+    "27ba1684-9218-4a9d-9aee-d50003d1badb",
+    "1669bee7-7a56-4d6e-8edb-5ccea6316ac9",
+    "90895e24-1e7f-45ab-ae23-5a9548eff96b",
+    "c19faa28-a1c8-4d0f-954e-8ddaa90e852a"
+  ],
+  "dropped_no_media": [],
+  "hash": "e1f93fe7b6b4",
+  "replayed_at": "2026-11-06T00:21:17.490226+00:00"
+}

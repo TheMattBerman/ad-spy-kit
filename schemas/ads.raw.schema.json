@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ads.raw.schema.json",
+  "type": "object",
+  "required": ["competitor_id", "pulled_at", "source", "ads"],
+  "properties": {
+    "competitor_id": { "type": "string" },
+    "pulled_at": { "type": "string" },
+    "source": { "enum": ["stealads", "scrapecreators", "fixture"] },
+    "collect_mode": { "type": "string" },
+    "total_available": { "type": "number" },
+    "import_cap_hit": { "type": "boolean" },
+    "schema_version": { "type": ["integer", "null"] },
+    "reply_format": { "enum": ["json", "text", "mixed", "none"] },
+    "skipped": { "type": "array" },
+    "ads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ad_id", "headline", "body", "days_live", "variation_count", "is_active", "format"],
+        "properties": {
+          "ad_id": { "type": "string" },
+          "bangers_rank": { "type": ["integer", "null"] },
+          "banger_band": { "type": ["string", "null"] },
+          "strength_label": { "type": ["string", "null"] },
+          "why": { "type": ["string", "null"] },
+          "group_id": { "type": ["string", "null"] },
+          "media_hash": { "type": "string" },
+          "dedupe_key": { "type": "string" },
+          "facebook_ad_id": { "type": ["string", "null"] },
+          "copy_hook": { "type": "string" },
+          "spoken_hook": { "type": ["string", "null"] },
+          "onscreen_hook": { "type": ["string", "null"] },
+          "hook_source": { "enum": ["spoken", "onscreen", "copy"] },
+          "transcript": { "type": ["string", "null"] },
+          "onscreen_text": { "type": ["string", "null"] }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

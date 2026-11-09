@@ -1,0 +1,6 @@
+{
+  "grade": null,
+  "status": "ungraded",
+  "note": "No official kit-review grade. The earlier 'Gold' came from a hand-written cached snapshot plus a loosened vendored compliance scan; both were removed on 2026-10-28. Grade with `bash evals/run-kit-review.sh api` (OPENROUTER_API_KEY) or the subagent path. See evals/self-assessment.md for a clearly labeled self-assessment.",
+  "command": "bash evals/run-kit-review.sh api"
+}

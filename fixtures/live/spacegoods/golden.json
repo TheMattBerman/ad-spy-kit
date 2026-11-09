@@ -1,0 +1,65 @@
+{
+  "rule_version": "w2",
+  "rank_source": "find_bangers",
+  "thin_signal": false,
+  "winner_order": [
+    "8873b3b7-6fb2-4e18-b436-442268ff1477",
+    "22e33100-8ac2-4f8e-b0a1-f855b4fec499",
+    "27ba1684-9218-4a9d-9aee-d50003d1badb",
+    "1669bee7-7a56-4d6e-8edb-5ccea6316ac9",
+    "90895e24-1e7f-45ab-ae23-5a9548eff96b",
+    "c19faa28-a1c8-4d0f-954e-8ddaa90e852a"
+  ],
+  "winner_why": {
+    "8873b3b7-6fb2-4e18-b436-442268ff1477": "Live 78 days · 3 versions · still running",
+    "22e33100-8ac2-4f8e-b0a1-f855b4fec499": "Live 78 days · still running",
+    "27ba1684-9218-4a9d-9aee-d50003d1badb": "Live 64 days · still running",
+    "1669bee7-7a56-4d6e-8edb-5ccea6316ac9": "Live 63 days · still running",
+    "90895e24-1e7f-45ab-ae23-5a9548eff96b": "Live 56 days · still running",
+    "c19faa28-a1c8-4d0f-954e-8ddaa90e852a": "Live 42 days · 2 versions · still running"
+  },
+  "dupes_merged": {
+    "90895e24-1e7f-45ab-ae23-5a9548eff96b": [
+      "6a8a11e1-ed95-4000-9d79-0bd02400832d"
+    ]
+  },
+  "quarantined": [],
+  "gap_order": [
+    "None of these ads name Black Friday",
+    "Most ads share one caption",
+    "2 of these ads mention the 60-day guarantee, none leads with it"
+  ],
+  "gap_citations": [
+    [
+      "8873b3b7-6fb2-4e18-b436-442268ff1477",
+      "22e33100-8ac2-4f8e-b0a1-f855b4fec499",
+      "27ba1684-9218-4a9d-9aee-d50003d1badb"
+    ],
+    [
+      "1669bee7-7a56-4d6e-8edb-5ccea6316ac9",
+      "90895e24-1e7f-45ab-ae23-5a9548eff96b",
+      "c19faa28-a1c8-4d0f-954e-8ddaa90e852a"
+    ],
+    [
+      "8873b3b7-6fb2-4e18-b436-442268ff1477",
+      "27ba1684-9218-4a9d-9aee-d50003d1badb"
+    ]
+  ],
+  "citation_errors": [],
+  "hook_sources": {
+    "8873b3b7-6fb2-4e18-b436-442268ff1477": "spoken",
+    "22e33100-8ac2-4f8e-b0a1-f855b4fec499": "onscreen",
+    "27ba1684-9218-4a9d-9aee-d50003d1badb": "spoken",
+    "1669bee7-7a56-4d6e-8edb-5ccea6316ac9": "spoken",
+    "90895e24-1e7f-45ab-ae23-5a9548eff96b": "spoken",
+    "c19faa28-a1c8-4d0f-954e-8ddaa90e852a": "onscreen"
+  },
+  "analysis_hook_sources": {
+    "8873b3b7-6fb2-4e18-b436-442268ff1477": "spoken",
+    "27ba1684-9218-4a9d-9aee-d50003d1badb": "spoken",
+    "c19faa28-a1c8-4d0f-954e-8ddaa90e852a": "onscreen",
+    "22e33100-8ac2-4f8e-b0a1-f855b4fec499": "onscreen",
+    "1669bee7-7a56-4d6e-8edb-5ccea6316ac9": "spoken",
+    "90895e24-1e7f-45ab-ae23-5a9548eff96b": "spoken"
+  }
+}

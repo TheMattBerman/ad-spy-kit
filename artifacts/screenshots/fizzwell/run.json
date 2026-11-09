@@ -1,0 +1,16 @@
+{
+  "fixture": "fizzwell",
+  "source": "stealads",
+  "rank_source": "find_bangers",
+  "winners": [
+    "ad-1",
+    "ad-2",
+    "ad-3",
+    "ad-4",
+    "ad-5",
+    "ad-6"
+  ],
+  "dropped_no_media": [],
+  "hash": "797122580883",
+  "replayed_at": "2026-11-06T00:21:08.319125+00:00"
+}

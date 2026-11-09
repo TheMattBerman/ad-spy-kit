@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-10-29T06:20:00Z",
+  "source": "agent-vision",
+  "read_by": "the session agent looked at the cached image; no OCR service",
+  "items": [
+    {
+      "ad_id": "c19faa28-a1c8-4d0f-954e-8ddaa90e852a",
+      "role": "creative",
+      "read_from": "media/c19faa28-a1c8-4d0f-954e-8ddaa90e852a.jpg",
+      "onscreen_text": "Ordered it bro went for coffe flavour cant wait to get stuck in\nStone 20% discount\nspacegoods\nJust ordered some let’s see what it’s like 🤙 hope you and the girls all had a great holiday mate\nit’s not too late to change your morning coffee",
+      "onscreen_hook": "Ordered it bro went for coffe flavour cant wait to get stuck in",
+      "note": "Overlay text only, top to bottom; the pack labels are left out. No headline; the top message is the biggest text."
+    },
+    {
+      "ad_id": "22e33100-8ac2-4f8e-b0a1-f855b4fec499",
+      "role": "poster-frame",
+      "read_from": "media/22e33100-8ac2-4f8e-b0a1-f855b4fec499.jpg",
+      "onscreen_text": "@spacegoods is my cheat code for productivity! Get 20% off their starter kit with my exclusive code: EMILYN\nGet 20% off here with code EMILYN\nad",
+      "onscreen_hook": "@spacegoods is my cheat code for productivity! Get 20% off their starter kit with my exclusive code: EMILYN",
+      "note": "Video thumbnail, read because the transcript opening is garbled. The boxed headline is the hook; the link sticker and the 'ad' mark follow. Pack labels left out."
+    }
+  ]
+}

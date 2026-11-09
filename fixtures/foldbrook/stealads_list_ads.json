@@ -1,0 +1,209 @@
+{
+  "competitor_id": "cmp_foldbrook_fixture",
+  "pulled_at": "2026-10-28T18:00:00Z",
+  "ads": [
+    {
+      "id": "ad-1",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-1",
+      "start_date": "2026-09-01",
+      "headline": "Black Friday: up to 47% off wallets & rings",
+      "body_text": "Black Friday: up to 47% off wallets & rings.",
+      "original_cta": "Shop Now",
+      "link_url": "https://foldbrook.example/collections/wallets",
+      "format": "VIDEO",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 41,
+      "variation_count": 12,
+      "banger_band": "banger",
+      "why": "Live 41 days \u00b7 12 versions \u00b7 still running",
+      "group_id": "meta-foldbrook-001",
+      "media": [
+        {
+          "url": "fixture://ad-1.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ],
+      "transcript": "I've carried the same wallet for six years. Black Friday is the one week Foldbrook goes up to 47% off, so I grabbed the ring too.",
+      "analysis_summary": {
+        "visual": {
+          "headline": "UP TO 47% OFF"
+        }
+      }
+    },
+    {
+      "id": "ad-2",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-2",
+      "start_date": "2026-09-01",
+      "headline": "The last wallet you'll buy",
+      "body_text": "The last wallet you'll buy.",
+      "original_cta": "Shop Now",
+      "link_url": "https://foldbrook.example/collections/wallets",
+      "format": "IMAGE",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 38,
+      "variation_count": 9,
+      "banger_band": "banger",
+      "why": "Live 38 days \u00b7 9 versions \u00b7 still running",
+      "group_id": "meta-foldbrook-002",
+      "media": [
+        {
+          "url": "fixture://ad-2.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ],
+      "analysis_summary": {
+        "visual": {
+          "headline": "The last wallet you'll ever buy"
+        }
+      }
+    },
+    {
+      "id": "ad-3",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-3",
+      "start_date": "2026-09-01",
+      "headline": "VIP early access starts now",
+      "body_text": "VIP early access starts now.",
+      "original_cta": "Shop Now",
+      "link_url": "https://foldbrook.example/collections/wallets",
+      "format": "IMAGE",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 22,
+      "variation_count": 6,
+      "banger_band": "solid",
+      "why": "Live 22 days \u00b7 6 versions \u00b7 still running",
+      "group_id": "meta-foldbrook-003",
+      "media": [
+        {
+          "url": "fixture://ad-3.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-4",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-4",
+      "start_date": "2026-09-01",
+      "headline": "47% off, 48 hours only",
+      "body_text": "47% off, 48 hours only.",
+      "original_cta": "Shop Now",
+      "link_url": "https://foldbrook.example/collections/wallets",
+      "format": "CAROUSEL",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 19,
+      "variation_count": 5,
+      "banger_band": "solid",
+      "why": "Live 19 days \u00b7 5 versions \u00b7 still running",
+      "group_id": "meta-foldbrook-004",
+      "media": [
+        {
+          "url": "fixture://ad-4.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-5",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-5",
+      "start_date": "2026-09-01",
+      "headline": "Why we rarely discount",
+      "body_text": "Why we rarely discount.",
+      "original_cta": "Shop Now",
+      "link_url": "https://foldbrook.example/collections/wallets",
+      "format": "VIDEO",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 15,
+      "variation_count": 4,
+      "banger_band": "testing",
+      "why": "Live 15 days \u00b7 4 versions \u00b7 still running",
+      "group_id": "meta-foldbrook-005",
+      "media": [
+        {
+          "url": "fixture://ad-5.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-6",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-6",
+      "start_date": "2026-09-01",
+      "headline": "Bundle the carry system",
+      "body_text": "Bundle the carry system.",
+      "original_cta": "Shop Now",
+      "link_url": "https://foldbrook.example/collections/wallets",
+      "format": "IMAGE",
+      "is_active": true,
+      "still_running": true,
+      "run_duration_days": 11,
+      "variation_count": 3,
+      "banger_band": "testing",
+      "why": "Live 11 days \u00b7 3 versions \u00b7 still running",
+      "group_id": "meta-foldbrook-006",
+      "media": [
+        {
+          "url": "fixture://ad-6.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-7",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-7",
+      "start_date": "2026-09-01",
+      "headline": "New colors drop Friday",
+      "body_text": "New colors drop Friday.",
+      "original_cta": "Shop Now",
+      "link_url": "https://foldbrook.example/collections/wallets",
+      "format": "IMAGE",
+      "is_active": true,
+      "still_running": false,
+      "run_duration_days": 5,
+      "variation_count": 1,
+      "banger_band": "testing",
+      "why": null,
+      "group_id": null,
+      "media": [
+        {
+          "url": "fixture://ad-7.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "id": "ad-8",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=ad-8",
+      "start_date": "2026-09-01",
+      "headline": "Free shipping over $75",
+      "body_text": "Free shipping over $75.",
+      "original_cta": "Shop Now",
+      "link_url": "https://foldbrook.example/collections/wallets",
+      "format": "IMAGE",
+      "is_active": true,
+      "still_running": false,
+      "run_duration_days": 4,
+      "variation_count": 2,
+      "banger_band": "testing",
+      "why": null,
+      "group_id": null,
+      "media": [
+        {
+          "url": "fixture://ad-8.png",
+          "durable": true,
+          "kind": "image"
+        }
+      ]
+    }
+  ]
+}

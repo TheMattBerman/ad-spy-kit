@@ -1,0 +1,8 @@
+# Hard stop. If a query, page name, page ID, IG handle or domain matches an entry,
+# resolve and pull refuse to run (ad_spy_kit/exclusions.py). Matching ignores case,
+# spaces, punctuation, @ and http(s)://www.
+#
+# Entries are strings, or maps with any of: name, page_id, ig, domain.
+# Add brands you never want pulled, such as your clients or your own brand.
+brands: []
+#  - name: Your Client Co

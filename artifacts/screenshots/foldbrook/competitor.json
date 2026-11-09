@@ -1,0 +1,14 @@
+{
+  "query": "foldbrook wallet",
+  "competitor_id": "cmp_foldbrook_fixture",
+  "brand_id": "brand_fixture",
+  "page_id": "123456789",
+  "page_name": "Foldbrook",
+  "ig_username": "foldbrook",
+  "followers": 890000,
+  "country": "US",
+  "confidence": "exact",
+  "alternates": [],
+  "tracked": false,
+  "source": "fixture"
+}

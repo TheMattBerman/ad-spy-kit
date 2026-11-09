@@ -1,0 +1,161 @@
+/* Board design tokens: Claude can reskin the board by editing this file only.
+   Look: light grey ground, big black title, black counter boxes, real ads large.
+   Everything that matters stays readable when the board shrinks to phone width (~1/3). */
+:root {
+  --bg: #d7d8d3;
+  --panel: #fafaf7;
+  --ink: #0b0b0b;
+  --mut: #5f5f5a;
+  --line: #0b0b0b;
+  --winner: #d4ff3a;
+  --font-display: "Helvetica Neue", Helvetica, Arial, "Inter", sans-serif;
+  --font-mono: "SF Mono", Menlo, "JetBrains Mono", "DejaVu Sans Mono", monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body.board-root { width: 1200px; min-height: 750px; background: var(--bg); color: var(--ink); font-family: var(--font-display); }
+body.board-root { padding: 18px 26px 0; position: relative; }
+.mono { font-family: var(--font-mono); }
+
+/* Title bar */
+.eyebrow { display: flex; gap: 10px; align-items: center; font-family: var(--font-mono); font-size: 15px; color: var(--mut); text-transform: uppercase; letter-spacing: .06em; }
+.eyebrow .brand { background: var(--ink); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: -.01em; text-transform: none; padding: 3px 12px; }
+.pill { font-family: var(--font-mono); font-size: 22px; padding: 3px 10px; border: 2px solid var(--ink); background: var(--panel); color: var(--ink); font-weight: 700; }
+.pill.warn { background: #ff4d4d; border-color: #ff4d4d; color: #fff; }
+h1.verdict { font-size: 58px; font-weight: 700; letter-spacing: -.045em; line-height: 1; margin: 6px 0 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Counters */
+.counters { display: grid; grid-template-columns: 1fr 1fr 1fr 1.6fr; gap: 10px; margin-bottom: 10px; }
+.ctr { background: var(--panel); border: 2px solid var(--line); padding: 6px 14px 4px; }
+.ctr.blk { background: var(--ink); color: #fff; }
+.ctr .k { font-family: var(--font-mono); font-size: 16px; text-transform: uppercase; letter-spacing: .08em; opacity: .75; }
+.ctr .v { font-family: var(--font-mono); font-weight: 700; font-size: 40px; line-height: 1.05; letter-spacing: -.02em; }
+.ctr .v small { font-size: 20px; font-weight: 400; letter-spacing: 0; }
+.ctr.labels .v { display: flex; gap: 16px; align-items: center; }
+.lc { display: inline-flex; align-items: center; gap: 6px; }
+.lc b { font-size: 36px; }
+.ctr .lab { font-size: 18px; }
+
+/* Label pills: big enough to read on a phone */
+.lab { display: inline-block; font-style: normal; font-family: var(--font-mono); font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: .06em; padding: 3px 9px; border: 2px solid var(--ink); background: var(--panel); color: var(--ink); line-height: 1.1; }
+.lab.winner { background: var(--winner); }
+.lab.solid { background: var(--ink); color: #fff; }
+.lab.testing { background: var(--panel); color: var(--ink); }
+
+/* Cards */
+.main-grid { display: flex; flex-direction: column; gap: 10px; }
+.card { background: var(--panel); border: 2px solid var(--line); padding: 8px 12px 10px; position: relative; }
+.ttl { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; white-space: nowrap; margin-bottom: 6px; font-family: var(--font-mono); font-size: 16px; text-transform: uppercase; letter-spacing: .06em; }
+.ttl b { font-weight: 700; }
+.ttl .n { color: var(--ink); overflow: hidden; text-overflow: ellipsis; }
+
+/* Their top ads: the #1 big, the rest in a row */
+.ads { display: flex; gap: 12px; align-items: flex-start; }
+.ad { flex: 0 0 auto; width: 120px; min-width: 0; }
+.ad .cap .row { gap: 6px; white-space: nowrap; }
+.ad.lead { width: 448px; display: flex; gap: 14px; }
+.thumb { position: relative; height: 200px; width: auto; max-width: 100%; background: #e9e9e4; overflow: hidden; margin: 0 auto; border: 1px solid #c9c9c3; }
+.ad.lead .thumb { width: auto; height: 236px; max-height: none; margin: 0; flex: 0 0 auto; }
+.thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.thumb.tiny img { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: none; }
+.play { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 34px; height: 34px; border-radius: 50%; background: rgba(0,0,0,.6); color: #fff; font-size: 13px; line-height: 34px; text-align: center; padding-left: 3px; }
+.cap { margin-top: 6px; display: flex; flex-direction: column; gap: 4px; }
+.ad.lead .cap { margin-top: 0; gap: 10px; }
+.cap .row { display: flex; align-items: center; gap: 6px; }
+.rank { font-family: var(--font-mono); font-weight: 700; font-size: 18px; }
+.days { font-family: var(--font-mono); font-weight: 700; font-size: 18px; margin-left: auto; }
+.ad .lab { font-size: 14px; padding: 2px 5px; }
+.ad.lead .lab { font-size: 20px; padding: 4px 12px; }
+.ad.lead .rank { font-size: 20px; }
+.ad.lead .days { font-size: 20px; margin-left: 0; }
+.q { font-size: 12px; line-height: 1.25; font-weight: 600; overflow-wrap: break-word; }
+.ad.lead .q { font-size: 30px; line-height: 1.12; font-weight: 700; letter-spacing: -.02em; }
+.why { font-family: var(--font-mono); font-size: 14px; color: var(--mut); }
+.cat-badge { position: absolute; left: 0; bottom: 0; z-index: 2; background: var(--ink); color: #fff; font-family: var(--font-mono); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; padding: 2px 5px; white-space: nowrap; }
+.ad.lead .cat-badge { font-size: 13px; padding: 3px 8px; }
+.slice-card .cat-badge { font-size: 16px; padding: 4px 10px; }
+.nq { font-family: var(--font-mono); font-size: 12px; color: var(--mut); text-transform: uppercase; letter-spacing: .04em; }
+.nq { text-transform: none; font-size: 18px; letter-spacing: 0; }
+.ad.lead .why { font-size: 12px; white-space: nowrap; }
+.dest { display: block; font-family: var(--font-mono); font-size: 12px; color: var(--mut); overflow-wrap: anywhere; }
+.slice-dest { font-size: 17px; font-family: var(--font-mono); overflow-wrap: anywhere; }
+.ad.lead .nq { font-size: 22px; font-weight: 600; color: var(--ink); }
+.slice-cap .nq { display: block; font-size: 18px; margin-top: 6px; }
+.src { font-style: normal; font-family: var(--font-mono); font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; border: 1px solid var(--ink); padding: 0 4px; margin-right: 1px; vertical-align: 2px; white-space: nowrap; }
+.ad.lead .src { font-size: 14px; vertical-align: 6px; }
+
+/* Bottom row */
+.col-mid { display: grid; grid-template-columns: 1.3fr 1.3fr 0.9fr; gap: 10px; height: 196px; }
+.col-mid .card { overflow: hidden; }
+.exp-h { font-size: 30px; font-weight: 700; letter-spacing: -.03em; line-height: 1.05; }
+.nums { display: flex; gap: 22px; margin-top: 10px; align-items: center; }
+.num { display: flex; align-items: center; gap: 8px; }
+.num .big { font-size: 46px; font-weight: 700; letter-spacing: -.04em; line-height: 1; }
+.num .lab { font-size: 14px; padding: 2px 6px; white-space: nowrap; }
+.nw { white-space: nowrap; }
+.cad { display: flex; gap: 10px; }
+.cad-img { width: 70px; height: 88px; object-fit: cover; }
+.cad-txt p.cad-h .lab { font-size: 15px; }
+.cad-txt p.cad-why { font-size: 13px; line-height: 1.25; font-weight: 600; color: var(--mut); margin-top: 5px; }
+.cad-txt p.cad-hook { font-size: 30px; font-weight: 700; letter-spacing: -.035em; line-height: 1.04; margin: 2px 0 0; }
+.counter .cad-cta { position: absolute; left: 12px; bottom: 10px; }
+.cad-cta { display: inline-block; font-family: var(--font-mono); font-size: 15px; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: 0; white-space: nowrap; background: var(--winner); padding: 3px 8px; }
+.tiles { display: grid; grid-template-columns: repeat(8, 1fr); gap: 2px; }
+.all-ads .tile { aspect-ratio: 9 / 13; }
+.tile { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+
+/* Footer */
+.footrow { position: absolute; left: 26px; right: 26px; top: 716px; display: flex; justify-content: flex-end; font-family: var(--font-mono); font-size: 18px; font-weight: 700; }
+.footrow .foot { background: var(--ink); color: #fff; padding: 2px 10px; }
+.footrow .foot a { color: var(--winner); }
+.foot a, .slice-handle a { color: var(--ink); font-weight: 700; text-decoration: none; }
+
+/* Carousel slices (1080x1350) */
+.slice { position: absolute; left: -9999px; top: 0; width: 1080px; height: 1350px; background: var(--bg); }
+.slice-inner { padding: 56px; height: 100%; position: relative; display: flex; flex-direction: column; }
+.slice-tag { font-family: var(--font-mono); font-size: 18px; color: var(--mut); letter-spacing: .06em; text-transform: uppercase; }
+.slice-h2 { font-size: 92px; font-weight: 700; letter-spacing: -.045em; line-height: .98; margin-top: 28px; }
+.slice-ctrs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 36px; }
+.slice-ctrs .ctr .k { font-size: 18px; }
+.slice-ctrs .ctr .v { font-size: 64px; }
+.slice-top { font-size: 34px; font-weight: 600; letter-spacing: -.02em; line-height: 1.15; margin-top: 22px; color: var(--ink); }
+.slice-tiles { display: grid; grid-template-columns: repeat(8, 1fr); grid-auto-rows: minmax(0, 1fr); gap: 4px; margin: 28px 0 170px; flex: 1; min-height: 0; overflow: hidden; }
+.slice-tiles .tile { height: 100%; min-height: 0; aspect-ratio: auto; }
+.slice-hidden { font-size: 26px; padding: 12px 20px; margin-top: 24px; }
+.slice-evi { display: grid; gap: 14px; margin-top: 14px; }
+.evi { position: relative; aspect-ratio: 3 / 4; background: #e9e9e4; border: 1px solid #c9c9c3; }
+.evi img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.evi b { position: absolute; left: 0; bottom: 0; background: var(--ink); color: #fff; font-family: var(--font-mono); font-size: 18px; padding: 2px 8px; }
+.slice-line { font-size: 38px; font-weight: 700; letter-spacing: -.02em; line-height: 1.15; margin-top: 28px; background: var(--panel); border: 2px solid var(--line); padding: 18px 22px; }
+.slice-line .q { font-size: inherit; line-height: inherit; font-weight: 700; }
+.slice-sub { font-size: 22px; font-weight: 400; color: var(--mut); letter-spacing: 0; }
+.slice-cta { display: block; margin-top: 28px; font-size: 18px; line-height: 1.35; text-transform: none; white-space: normal; padding: 8px 12px; }
+.slice-wall { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 30px; }
+.slice-card { min-width: 0; }
+.slice-card .thumb { width: auto; height: 320px; max-height: none; }
+.slice-card .play { width: 56px; height: 56px; font-size: 20px; line-height: 56px; }
+.slice-cap { margin-top: 10px; }
+.slice-cap .row { display: flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 22px; }
+.slice-cap .lab { font-size: 18px; }
+.slice-cap .days { font-size: 22px; }
+.slice-cap .q { display: block; font-size: 20px; margin-top: 6px; line-height: 1.2; }
+.slice-note { position: absolute; bottom: 92px; left: 56px; right: 56px; font-size: 22px; color: var(--mut); }
+.slice-handle { position: absolute; bottom: 56px; left: 56px; font-family: var(--font-mono); font-size: 18px; color: var(--mut); }
+.slice-big { font-size: 260px; font-weight: 700; letter-spacing: -.06em; line-height: .9; margin-top: 40px; }
+.slice-kicker { font-family: var(--font-mono); font-size: 26px; text-transform: uppercase; letter-spacing: .06em; margin-top: 36px; }
+.slice-ometa { font-family: var(--font-mono); margin-top: 8px; }
+.slice-meta { font-family: var(--font-mono); margin-top: 14px; }
+.eyebrow .pill { font-size: 20px; padding: 3px 10px; border-width: 2px; vertical-align: 0; letter-spacing: .04em; }
+
+/* Offers slice: each offer sits next to the ad it came from, sized to the number of rows. */
+.offer-row { display: flex; gap: 22px; align-items: center; }
+.offer-thumb { width: 120px; aspect-ratio: 4 / 5; object-fit: cover; flex: 0 0 auto; }
+.offer-row.n1 .offer-thumb { width: 340px; }
+.offer-row.n2 .offer-thumb { width: 230px; }
+.offer-row.n1 { font-size: 46px; }
+.offer-txt { min-width: 0; }
+
+/* Counter-ad slice: the headline is the big line, the hook sits in its own labeled block. */
+.cs-head { font-size: 96px; line-height: 1.0; }
+.slice-line.cs-hook, .slice-line.cs-row { display: flex; flex-direction: column; gap: 14px; padding: 22px 28px; margin-top: 28px; }
+.cs-q { font-size: 68px; font-weight: 700; letter-spacing: -.03em; line-height: 1.08; display: block; }
+.cs-t { font-size: 42px; font-weight: 700; letter-spacing: -.02em; line-height: 1.18; display: block; }

@@ -1,0 +1,48 @@
+[project]
+name = "ad-spy-kit"
+version = "1.6.0"
+description = "Claude skill kit: BFCM competitor teardown boards (StealAds-first)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Matthew Berman" }]
+dependencies = [
+  "jinja2>=3.1",
+  "jsonschema>=4.23",
+  "pillow>=10.4",
+  "imagehash>=4.3",
+  "pyyaml>=6.0",
+  "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3",
+  "ruff>=0.8",
+  "playwright>=1.49",
+]
+
+[project.scripts]
+ad-spy-kit = "ad_spy_kit.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ad_spy_kit", "cie"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["vendor", "cie"]  # ported upstream code (bigskills, CIE), kept as-is
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3",
+  "ruff>=0.8",
+  "playwright>=1.49",
+]

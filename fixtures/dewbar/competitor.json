@@ -1,0 +1,14 @@
+{
+  "query": "dewbar skincare",
+  "competitor_id": "cmp_dewbar_fixture",
+  "brand_id": "brand_fixture",
+  "page_id": "223344556",
+  "page_name": "Dewbar",
+  "ig_username": "dewbar",
+  "followers": 412000,
+  "country": "US",
+  "confidence": "exact",
+  "alternates": [],
+  "tracked": false,
+  "source": "fixture"
+}

@@ -1,0 +1,35 @@
+# Trigger evals for the orchestrator (bigskills rubric dim 1).
+# tests/test_skill_frontmatter.py checks each `anchor` appears in the SKILL.md description,
+# so the description can't drift away from the phrases it's meant to catch. Live routing
+# (does the agent actually pick this skill?) needs an agent run: paste each prompt into a
+# fresh session and record pass/fail here under `observed`.
+skill: ad-spy-kit
+should_trigger:
+  - prompt: "tear down Bellroy's Black Friday ads"
+    anchor: "tear down"
+  - prompt: "what is Glossier running for BFCM this year?"
+    anchor: "BFCM"
+  - prompt: "spy on Olipop's Facebook ads and tell me what's working"
+    anchor: "spy on a competitor"
+  - prompt: "competitor ad teardown for Athletic Brewing"
+    anchor: "competitor ad teardown"
+  - prompt: "make me a steal board for Liquid Death"
+    anchor: "steal board"
+  - prompt: "write counter-ads against Hims"
+    anchor: "counter-ads"
+  - prompt: "spy on my category: black friday skincare"
+    anchor: "spy on my category"
+  - prompt: "sort my competitors' ads for Glossier, Rhode and Summer Fridays"
+    anchor: "sort my competitors' ads"
+should_not_trigger:
+  - prompt: "why did my ROAS drop last week?"
+    anchor: "spend/ROAS"
+  - prompt: "audit my own Meta ad account"
+    anchor: "own ad"
+  - prompt: "what should we post on TikTok organically?"
+    anchor: "organic social"
+  - prompt: "critique this ad screenshot"
+    anchor: "single ad screenshot"
+  - prompt: "write me five Facebook ads for my candle brand"
+    anchor: "from scratch"
+observed: []  # e.g. {prompt: ..., agent: claude-code, routed: true, date: 2026-11-01}

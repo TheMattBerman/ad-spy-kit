@@ -1,0 +1,156 @@
+{
+  "competitor": "Dewbar",
+  "headline": {
+    "top": "Dewbar has 4 Black Friday ads running, every one a set or a gift.",
+    "bottom": "None of them show skin that changed."
+  },
+  "stats": [
+    {
+      "label": "Ads checked",
+      "value": "8",
+      "sub": "checked Oct 28",
+      "tone": "g"
+    },
+    {
+      "label": "Kept running",
+      "value": "6",
+      "sub": "7+ days or 3+ versions",
+      "tone": "g"
+    },
+    {
+      "label": "Avg days",
+      "value": "20",
+      "sub": "ads on the board",
+      "tone": "n"
+    },
+    {
+      "label": "Hero set",
+      "value": "$58",
+      "sub": "caption of #01",
+      "tone": "g"
+    }
+  ],
+  "offer_map": [
+    {
+      "ad_id": "ad-1",
+      "offer_type": "bundle",
+      "discount_depth": "3 full sizes",
+      "urgency": "none",
+      "early_access": false,
+      "evidence": "3 full sizes for $58 ($84 value)"
+    },
+    {
+      "ad_id": "ad-2",
+      "offer_type": "gift_with_purchase",
+      "discount_depth": "over $40",
+      "urgency": "date",
+      "early_access": false,
+      "evidence": "Free gift with every order over $40, through Cyber Monday"
+    },
+    {
+      "ad_id": "ad-6",
+      "offer_type": "bundle",
+      "discount_depth": "20%",
+      "urgency": "none",
+      "early_access": false,
+      "evidence": "Bundle any 3 minis, save 20%"
+    },
+    {
+      "ad_id": "ad-3",
+      "offer_type": "early_access",
+      "discount_depth": "VIP",
+      "urgency": "none",
+      "early_access": true,
+      "evidence": "Join the VIP list"
+    }
+  ],
+  "hooks": [
+    {
+      "ad_id": "ad-1",
+      "hook_text": "Black Friday Glow Set: 3 full sizes for $58 ($84 value).",
+      "pattern": "offer",
+      "puppet_string": "wealth",
+      "fear_amplifier": false,
+      "triggers": [
+        {
+          "name": "contrast",
+          "strength": "moderate"
+        }
+      ],
+      "hook_source": "copy"
+    },
+    {
+      "ad_id": "ad-4",
+      "hook_text": "Okay, two jars in and my skin barrier finally stopped flaking.",
+      "pattern": "story",
+      "puppet_string": "health",
+      "fear_amplifier": false,
+      "triggers": [
+        {
+          "name": "identity",
+          "strength": "heavy"
+        }
+      ],
+      "hook_source": "spoken"
+    },
+    {
+      "ad_id": "ad-5",
+      "hook_text": "Dermatologist-tested. Fragrance-free.",
+      "pattern": "proof",
+      "puppet_string": "health",
+      "fear_amplifier": false,
+      "triggers": [
+        {
+          "name": "authority",
+          "strength": "heavy"
+        }
+      ],
+      "hook_source": "copy"
+    }
+  ],
+  "formats": [
+    {
+      "format": "faceless-demo",
+      "count": 1,
+      "days_live_sum": 34,
+      "verdict": "sat"
+    },
+    {
+      "format": "native-photo-long-copy",
+      "count": 3,
+      "days_live_sum": 60,
+      "verdict": "sat"
+    },
+    {
+      "format": "yapper",
+      "count": 1,
+      "days_live_sum": 18,
+      "verdict": "open"
+    },
+    {
+      "format": "carousel",
+      "count": 1,
+      "days_live_sum": 9,
+      "verdict": "open"
+    }
+  ],
+  "gaps": [
+    {
+      "gap": "None of their ads show a visible before and after",
+      "evidence_ad_ids": [
+        "ad-4",
+        "ad-5"
+      ],
+      "gap_score": 7,
+      "counter_angle": "Same face, first day and sixth week, no filter"
+    }
+  ],
+  "steal_this": [
+    {
+      "ad_id": "ad-2",
+      "template": "Give a free gift over a set order size, with a clear end date.",
+      "dont_copy": "Skip the \"Glow Set\" name. It's their signature."
+    }
+  ],
+  "citations_ok": true
+}

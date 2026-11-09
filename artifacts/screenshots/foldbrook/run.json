@@ -1,0 +1,16 @@
+{
+  "fixture": "foldbrook",
+  "source": "stealads",
+  "rank_source": "find_bangers",
+  "winners": [
+    "ad-1",
+    "ad-2",
+    "ad-3",
+    "ad-4",
+    "ad-5",
+    "ad-6"
+  ],
+  "dropped_no_media": [],
+  "hash": "ed0f6120cf83",
+  "replayed_at": "2026-11-06T00:21:12.608611+00:00"
+}

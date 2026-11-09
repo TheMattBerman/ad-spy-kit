@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "winners.schema.json",
+  "type": "object",
+  "required": ["rule_version", "computed_at", "pool_size", "rank_source", "winners", "quarantined", "format_mix"],
+  "properties": {
+    "rule_version": { "type": "string" },
+    "computed_at": { "type": "string" },
+    "pool_size": { "type": "number" },
+    "rank_source": { "enum": ["find_bangers", "fallback_runlength"] },
+    "thin_signal": { "type": "boolean" },
+    "winners": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ad_id", "days_live", "variations", "bf_tag", "why"],
+        "properties": {
+          "banger_band": { "type": ["string", "null"] },
+          "strength_label": { "type": ["string", "null"] },
+          "bangers_rank": { "type": ["integer", "null"] }
+        },
+        "additionalProperties": true
+      }
+    },
+    "quarantined": { "type": "array" },
+    "format_mix": { "type": "object" }
+  },
+  "additionalProperties": true
+}

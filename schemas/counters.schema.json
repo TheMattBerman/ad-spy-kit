@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "counters.schema.json",
+  "type": "object",
+  "required": [
+    "counters"
+  ],
+  "properties": {
+    "counters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "gap_ref",
+          "angle",
+          "headline",
+          "hook",
+          "visual_direction",
+          "why_it_beats"
+        ],
+        "properties": {
+          "gap_ref": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "beats_ad_id": {
+            "type": "string",
+            "description": "the winner this counter is aimed at"
+          },
+          "angle": {
+            "type": "string",
+            "minLength": 1
+          },
+          "headline": {
+            "type": "string",
+            "minLength": 1
+          },
+          "hook": {
+            "type": "string",
+            "minLength": 1
+          },
+          "visual_direction": {
+            "type": "string",
+            "minLength": 1
+          },
+          "why_it_beats": {
+            "type": "string",
+            "minLength": 1
+          },
+          "offer": {
+            "type": "string"
+          },
+          "aspect": {
+            "enum": [
+              "4:5",
+              "1:1",
+              "9:16"
+            ]
+          },
+          "status": {
+            "enum": [
+              "brief",
+              "rendered"
+            ]
+          },
+          "asset_path": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "set only when StealAds rendered the ad"
+          },
+          "job_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "credits_quoted": {
+      "type": "number"
+    },
+    "credits_approved": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true,
+  "title": "counters.json: counter-ad briefs (headline, hook, visual direction, why it beats the original)"
+}

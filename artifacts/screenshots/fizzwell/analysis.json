@@ -1,0 +1,156 @@
+{
+  "competitor": "Fizzwell",
+  "headline": {
+    "top": "Fizzwell has 4 Black Friday ads running, all discounts and packs.",
+    "bottom": "None of them sell it as the party drink."
+  },
+  "stats": [
+    {
+      "label": "Ads checked",
+      "value": "8",
+      "sub": "checked Oct 28",
+      "tone": "g"
+    },
+    {
+      "label": "Kept running",
+      "value": "6",
+      "sub": "7+ days or 3+ versions",
+      "tone": "g"
+    },
+    {
+      "label": "Avg days",
+      "value": "20",
+      "sub": "ads on the board",
+      "tone": "n"
+    },
+    {
+      "label": "Max off",
+      "value": "30%",
+      "sub": "caption of #01",
+      "tone": "g"
+    }
+  ],
+  "offer_map": [
+    {
+      "ad_id": "ad-1",
+      "offer_type": "pct_off",
+      "discount_depth": "30%",
+      "urgency": "countdown",
+      "early_access": false,
+      "evidence": "30% off every 12-pack, today only"
+    },
+    {
+      "ad_id": "ad-2",
+      "offer_type": "pct_off",
+      "discount_depth": "15%",
+      "urgency": "none",
+      "early_access": false,
+      "evidence": "Subscribe and save 15% forever"
+    },
+    {
+      "ad_id": "ad-3",
+      "offer_type": "bundle",
+      "discount_depth": "12 flavors",
+      "urgency": "none",
+      "early_access": false,
+      "evidence": "Gift a variety pack"
+    },
+    {
+      "ad_id": "ad-5",
+      "offer_type": "free_shipping",
+      "discount_depth": "free shipping",
+      "urgency": "none",
+      "early_access": false,
+      "evidence": "free shipping on any 2 packs"
+    }
+  ],
+  "hooks": [
+    {
+      "ad_id": "ad-1",
+      "hook_text": "Black Friday: 30% off every 12-pack, today only.",
+      "pattern": "offer",
+      "puppet_string": "wealth",
+      "fear_amplifier": false,
+      "triggers": [
+        {
+          "name": "scarcity",
+          "strength": "heavy"
+        }
+      ],
+      "hook_source": "copy"
+    },
+    {
+      "ad_id": "ad-4",
+      "hook_text": "Tastes like the soda you grew up on.",
+      "pattern": "story",
+      "puppet_string": "escape",
+      "fear_amplifier": false,
+      "triggers": [
+        {
+          "name": "identity",
+          "strength": "moderate"
+        }
+      ],
+      "hook_source": "copy"
+    },
+    {
+      "ad_id": "ad-2",
+      "hook_text": "Subscribe and save 15% forever.",
+      "pattern": "offer",
+      "puppet_string": "wealth",
+      "fear_amplifier": false,
+      "triggers": [
+        {
+          "name": "contrast",
+          "strength": "subtle"
+        }
+      ],
+      "hook_source": "copy"
+    }
+  ],
+  "formats": [
+    {
+      "format": "faceless-demo",
+      "count": 1,
+      "days_live_sum": 29,
+      "verdict": "sat"
+    },
+    {
+      "format": "native-photo-long-copy",
+      "count": 3,
+      "days_live_sum": 54,
+      "verdict": "sat"
+    },
+    {
+      "format": "carousel",
+      "count": 1,
+      "days_live_sum": 20,
+      "verdict": "open"
+    },
+    {
+      "format": "yapper",
+      "count": 1,
+      "days_live_sum": 17,
+      "verdict": "open"
+    }
+  ],
+  "gaps": [
+    {
+      "gap": "None of their ads put Fizzwell at a holiday table or party",
+      "evidence_ad_ids": [
+        "ad-1",
+        "ad-3"
+      ],
+      "gap_score": 7,
+      "counter_angle": "The drink for everyone skipping alcohol this season"
+    }
+  ],
+  "steal_this": [
+    {
+      "ad_id": "ad-2",
+      "template": "Offer a subscription discount that never runs out, and say they can cancel anytime.",
+      "dont_copy": "Skip 30% off 12-packs. That's their Black Friday deal."
+    }
+  ],
+  "citations_ok": true
+}

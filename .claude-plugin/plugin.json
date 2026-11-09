@@ -1,0 +1,13 @@
+{
+  "name": "ad-spy-kit",
+  "version": "1.6.0",
+  "description": "Name a competitor and get one board of the Meta ads they keep running (sorted by how long each has run, labeled winner / solid / testing), every hook and offer quoted word for word, the opening none of them use, and a counter-ad brief. Also sorts a whole category.",
+  "author": {
+    "name": "Matthew Berman"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/TheMattBerman/ad-spy-kit",
+  "skills": [
+    "./"
+  ]
+}

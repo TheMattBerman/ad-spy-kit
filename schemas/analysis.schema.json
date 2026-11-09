@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "analysis.schema.json",
+  "title": "analysis.json: what the analyze step writes and the board reads",
+  "type": "object",
+  "required": ["competitor", "headline", "stats", "offer_map", "hooks", "formats", "gaps", "steal_this", "citations_ok"],
+  "$defs": {
+    "ad_id": { "type": "string", "minLength": 1 }
+  },
+  "properties": {
+    "competitor": { "type": "string", "minLength": 1 },
+    "headline": {
+      "type": "object",
+      "required": ["bottom"],
+      "properties": {
+        "top": { "type": "string", "minLength": 1, "maxLength": 90, "description": "optional: one plain line under the headline on the X summary slice and in teardown.md (never on the 1200x750 board)" },
+        "bottom": { "type": "string", "minLength": 1, "maxLength": 60 }
+      }
+    },
+    "stats": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["label", "value"],
+        "properties": {
+          "label": { "type": "string" },
+          "value": { "type": "string" },
+          "sub": { "type": "string" },
+          "tone": { "enum": ["g", "n", "r"] }
+        }
+      }
+    },
+    "offer_map": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ad_id", "offer_type", "evidence"],
+        "properties": {
+          "ad_id": { "$ref": "#/$defs/ad_id" },
+          "offer_type": { "enum": ["pct_off", "dollar_off", "bogo", "bundle", "gift_with_purchase", "free_shipping", "early_access", "price_drop", "price_claim", "guarantee", "none"] },
+          "discount_depth": { "type": "string" },
+          "urgency": { "enum": ["countdown", "date", "stock", "none"] },
+          "early_access": { "type": "boolean" },
+          "evidence": { "type": "string", "minLength": 1, "description": "verbatim substring of evidence_source" },
+          "evidence_source": { "enum": ["spoken", "onscreen", "copy"], "description": "where evidence is quoted from: transcript, on-screen text, or copy (default)" }
+        }
+      }
+    },
+    "hooks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ad_id", "hook_text", "pattern", "puppet_string"],
+        "properties": {
+          "ad_id": { "$ref": "#/$defs/ad_id" },
+          "hook_text": { "type": "string", "minLength": 1, "description": "verbatim substring of the hook_source text" },
+          "hook_source": { "enum": ["spoken", "onscreen", "copy"], "description": "spoken = transcript, onscreen = text in the creative, copy = post caption; missing means copy" },
+          "pattern": { "enum": ["question", "contrast", "story", "shock", "curiosity", "offer", "proof"] },
+          "puppet_string": { "enum": ["wealth", "health", "status-access", "escape", "romance"] },
+          "fear_amplifier": { "type": "boolean" },
+          "triggers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "strength"],
+              "properties": {
+                "name": { "enum": ["curiosity", "social-proof", "scarcity", "authority", "contrast", "identity"] },
+                "strength": { "enum": ["subtle", "moderate", "heavy"] }
+              }
+            }
+          }
+        }
+      }
+    },
+    "formats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["format", "count", "verdict"],
+        "properties": {
+          "format": { "type": "string" },
+          "count": { "type": "integer", "minimum": 0 },
+          "days_live_sum": { "type": "integer", "minimum": 0 },
+          "verdict": { "enum": ["open", "sat", "dead"] }
+        }
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["gap", "evidence_ad_ids", "counter_angle"],
+        "properties": {
+          "gap": { "type": "string", "minLength": 1 },
+          "evidence_ad_ids": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/ad_id" } },
+          "gap_score": { "type": "number", "description": "internal sort key only; never rendered" },
+          "counter_angle": { "type": "string", "minLength": 1 },
+          "mentions": {
+            "type": "object",
+            "description": "for lanes that count who says something; gate A6 checks it across transcript, on-screen text and copy",
+            "required": ["terms", "ad_ids", "evidence"],
+            "properties": {
+              "terms": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+              "ad_ids": { "type": "array", "items": { "$ref": "#/$defs/ad_id" } },
+              "leads": { "type": "array", "items": { "$ref": "#/$defs/ad_id" } },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["ad_id", "source", "quote"],
+                  "properties": {
+                    "ad_id": { "$ref": "#/$defs/ad_id" },
+                    "source": { "enum": ["spoken", "onscreen", "copy"] },
+                    "quote": { "type": "string", "minLength": 1 }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "steal_this": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ad_id", "template", "dont_copy"],
+        "properties": {
+          "ad_id": { "$ref": "#/$defs/ad_id" },
+          "template": { "type": "string" },
+          "dont_copy": { "type": "string" }
+        }
+      }
+    },
+    "citations_ok": { "type": "boolean" }
+  },
+  "additionalProperties": true
+}

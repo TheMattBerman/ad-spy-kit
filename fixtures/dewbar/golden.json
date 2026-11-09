@@ -1,0 +1,49 @@
+{
+  "rule_version": "w2",
+  "rank_source": "find_bangers",
+  "thin_signal": false,
+  "winner_order": [
+    "ad-1",
+    "ad-2",
+    "ad-3",
+    "ad-4",
+    "ad-5",
+    "ad-6"
+  ],
+  "winner_why": {
+    "ad-1": "Live 34 days · 11 versions · still running",
+    "ad-2": "Live 27 days · 8 versions · still running",
+    "ad-3": "Live 21 days · 5 versions · still running",
+    "ad-4": "Live 18 days · 4 versions · still running",
+    "ad-5": "Live 12 days · 3 versions · still running",
+    "ad-6": "Live 9 days · 3 versions · still running"
+  },
+  "dupes_merged": {},
+  "quarantined": [
+    "ad-7",
+    "ad-8"
+  ],
+  "gap_order": [
+    "None of their ads show a visible before and after"
+  ],
+  "gap_citations": [
+    [
+      "ad-4",
+      "ad-5"
+    ]
+  ],
+  "citation_errors": [],
+  "hook_sources": {
+    "ad-1": "copy",
+    "ad-2": "copy",
+    "ad-3": "copy",
+    "ad-4": "spoken",
+    "ad-5": "copy",
+    "ad-6": "copy"
+  },
+  "analysis_hook_sources": {
+    "ad-1": "copy",
+    "ad-4": "spoken",
+    "ad-5": "copy"
+  }
+}

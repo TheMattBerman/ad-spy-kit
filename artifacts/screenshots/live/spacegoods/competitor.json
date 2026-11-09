@@ -1,0 +1,14 @@
+{
+  "query": "Spacegoods",
+  "competitor_id": null,
+  "brand_id": null,
+  "page_id": "104163495557745",
+  "page_name": "Spacegoods",
+  "ig_username": null,
+  "country": "US",
+  "confidence": "exact",
+  "alternates": [],
+  "tracked": false,
+  "source": "stealads",
+  "resolved_with": "search_advertisers(query='Spacegoods') on the StealAds dev MCP: 1 match, 30 ads indexed"
+}

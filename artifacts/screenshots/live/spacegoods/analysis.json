@@ -1,0 +1,323 @@
+{
+  "competitor": "Spacegoods",
+  "headline": {
+    "top": "We checked 24 Spacegoods ads.",
+    "bottom": "Their top ad opens with an apology."
+  },
+  "stats": [
+    {
+      "label": "Ads checked",
+      "value": "24",
+      "sub": "checked Oct 28",
+      "tone": "g"
+    },
+    {
+      "label": "Kept running",
+      "value": "6",
+      "sub": "7+ days or 3+ versions",
+      "tone": "g"
+    },
+    {
+      "label": "Avg days",
+      "value": "64",
+      "sub": "ads on the board",
+      "tone": "n"
+    },
+    {
+      "label": "Longest run",
+      "value": "78",
+      "sub": "days, 2 ads",
+      "tone": "g"
+    }
+  ],
+  "offer_map": [
+    {
+      "ad_id": "8873b3b7-6fb2-4e18-b436-442268ff1477",
+      "offer_type": "pct_off",
+      "discount_depth": "58%",
+      "urgency": "stock",
+      "early_access": false,
+      "evidence": "everyone gets up to 58% off plus five free gifts plus free express delivery",
+      "evidence_source": "spoken"
+    },
+    {
+      "ad_id": "90895e24-1e7f-45ab-ae23-5a9548eff96b",
+      "offer_type": "pct_off",
+      "discount_depth": "50%",
+      "urgency": "none",
+      "early_access": false,
+      "evidence": "Then I saw the 50% off.",
+      "evidence_source": "spoken"
+    },
+    {
+      "ad_id": "22e33100-8ac2-4f8e-b0a1-f855b4fec499",
+      "offer_type": "pct_off",
+      "discount_depth": "20%",
+      "urgency": "none",
+      "early_access": false,
+      "evidence": "Get 20% off their starter kit with my exclusive code: EMILYN",
+      "evidence_source": "onscreen"
+    },
+    {
+      "ad_id": "c19faa28-a1c8-4d0f-954e-8ddaa90e852a",
+      "offer_type": "pct_off",
+      "discount_depth": "20%",
+      "urgency": "none",
+      "early_access": false,
+      "evidence": "Stone 20% discount",
+      "evidence_source": "onscreen"
+    },
+    {
+      "ad_id": "1669bee7-7a56-4d6e-8edb-5ccea6316ac9",
+      "offer_type": "pct_off",
+      "discount_depth": "58%",
+      "urgency": "countdown",
+      "early_access": false,
+      "evidence": "58% off already",
+      "evidence_source": "spoken"
+    },
+    {
+      "ad_id": "1669bee7-7a56-4d6e-8edb-5ccea6316ac9",
+      "offer_type": "gift_with_purchase",
+      "discount_depth": "",
+      "urgency": "countdown",
+      "early_access": false,
+      "evidence": "free gifts will be waiting for you at the checkout",
+      "evidence_source": "spoken"
+    },
+    {
+      "ad_id": "27ba1684-9218-4a9d-9aee-d50003d1badb",
+      "offer_type": "pct_off",
+      "discount_depth": "58%",
+      "urgency": "none",
+      "early_access": false,
+      "evidence": "up to 58% off right now for new customers",
+      "evidence_source": "spoken"
+    },
+    {
+      "ad_id": "27ba1684-9218-4a9d-9aee-d50003d1badb",
+      "offer_type": "guarantee",
+      "discount_depth": "",
+      "urgency": "none",
+      "early_access": false,
+      "evidence": "60-day money-back guarantee",
+      "evidence_source": "spoken"
+    },
+    {
+      "ad_id": "8873b3b7-6fb2-4e18-b436-442268ff1477",
+      "offer_type": "guarantee",
+      "discount_depth": "",
+      "urgency": "stock",
+      "early_access": false,
+      "evidence": "60-day money-back guarantee",
+      "evidence_source": "spoken"
+    },
+    {
+      "ad_id": "27ba1684-9218-4a9d-9aee-d50003d1badb",
+      "offer_type": "guarantee",
+      "discount_depth": "",
+      "urgency": "none",
+      "early_access": false,
+      "evidence": "Try it for 60 days, full refund if nothing shifts.",
+      "evidence_source": "copy"
+    }
+  ],
+  "hooks": [
+    {
+      "ad_id": "8873b3b7-6fb2-4e18-b436-442268ff1477",
+      "hook_text": "Apology to everyone who bought Rainbow Dust from our videos.",
+      "pattern": "shock",
+      "puppet_string": "health",
+      "fear_amplifier": false,
+      "triggers": [
+        {
+          "name": "curiosity",
+          "strength": "heavy"
+        }
+      ],
+      "hook_source": "spoken"
+    },
+    {
+      "ad_id": "27ba1684-9218-4a9d-9aee-d50003d1badb",
+      "hook_text": "Want sharper focus?",
+      "pattern": "question",
+      "puppet_string": "health",
+      "fear_amplifier": false,
+      "triggers": [
+        {
+          "name": "curiosity",
+          "strength": "moderate"
+        }
+      ],
+      "hook_source": "spoken"
+    },
+    {
+      "ad_id": "c19faa28-a1c8-4d0f-954e-8ddaa90e852a",
+      "hook_text": "Ordered it bro went for coffe flavour cant wait to get stuck in",
+      "pattern": "proof",
+      "puppet_string": "health",
+      "fear_amplifier": false,
+      "triggers": [
+        {
+          "name": "social-proof",
+          "strength": "subtle"
+        }
+      ],
+      "hook_source": "onscreen"
+    },
+    {
+      "ad_id": "22e33100-8ac2-4f8e-b0a1-f855b4fec499",
+      "hook_text": "@spacegoods is my cheat code for productivity! Get 20% off their starter kit with my exclusive code: EMILYN",
+      "pattern": "offer",
+      "puppet_string": "health",
+      "fear_amplifier": false,
+      "triggers": [
+        {
+          "name": "social-proof",
+          "strength": "moderate"
+        }
+      ],
+      "hook_source": "onscreen"
+    },
+    {
+      "ad_id": "1669bee7-7a56-4d6e-8edb-5ccea6316ac9",
+      "hook_text": "Right now, you can get a double discount on Rainbow Dust.",
+      "pattern": "offer",
+      "puppet_string": "wealth",
+      "fear_amplifier": true,
+      "triggers": [
+        {
+          "name": "scarcity",
+          "strength": "heavy"
+        }
+      ],
+      "hook_source": "spoken"
+    },
+    {
+      "ad_id": "90895e24-1e7f-45ab-ae23-5a9548eff96b",
+      "hook_text": "My husband replaced his morning coffee with Rainbow Dust and lost a stone without changing his diet.",
+      "pattern": "story",
+      "puppet_string": "health",
+      "fear_amplifier": false,
+      "triggers": [
+        {
+          "name": "social-proof",
+          "strength": "moderate"
+        }
+      ],
+      "hook_source": "spoken"
+    }
+  ],
+  "formats": [
+    {
+      "format": "yapper",
+      "count": 2,
+      "days_live_sum": 142,
+      "verdict": "sat"
+    },
+    {
+      "format": "faceless-demo",
+      "count": 2,
+      "days_live_sum": 119,
+      "verdict": "sat"
+    },
+    {
+      "format": "partnership-native-mimic",
+      "count": 1,
+      "days_live_sum": 78,
+      "verdict": "sat"
+    },
+    {
+      "format": "testimonial-screenshot",
+      "count": 1,
+      "days_live_sum": 42,
+      "verdict": "open"
+    },
+    {
+      "format": "us-vs-them",
+      "count": 2,
+      "days_live_sum": 66,
+      "verdict": "open"
+    }
+  ],
+  "gaps": [
+    {
+      "gap": "None of these ads name Black Friday",
+      "evidence_ad_ids": [
+        "8873b3b7-6fb2-4e18-b436-442268ff1477",
+        "22e33100-8ac2-4f8e-b0a1-f855b4fec499",
+        "27ba1684-9218-4a9d-9aee-d50003d1badb"
+      ],
+      "counter_angle": "Name the Black Friday stock-up in the first line of the copy",
+      "mentions": {
+        "terms": [
+          "black friday"
+        ],
+        "ad_ids": [],
+        "evidence": [],
+        "leads": []
+      }
+    },
+    {
+      "gap": "Most ads share one caption",
+      "evidence_ad_ids": [
+        "1669bee7-7a56-4d6e-8edb-5ccea6316ac9",
+        "90895e24-1e7f-45ab-ae23-5a9548eff96b",
+        "c19faa28-a1c8-4d0f-954e-8ddaa90e852a"
+      ],
+      "counter_angle": "A fresh first line per creative, aimed at the coffee drinker"
+    },
+    {
+      "gap": "2 of these ads mention the 60-day guarantee, none leads with it",
+      "evidence_ad_ids": [
+        "8873b3b7-6fb2-4e18-b436-442268ff1477",
+        "27ba1684-9218-4a9d-9aee-d50003d1badb"
+      ],
+      "counter_angle": "Lead with the risk-free trial, not the ingredient list",
+      "mentions": {
+        "terms": [
+          "money-back guarantee",
+          "money back",
+          "full refund",
+          "refund",
+          "guarantee"
+        ],
+        "ad_ids": [
+          "8873b3b7-6fb2-4e18-b436-442268ff1477",
+          "27ba1684-9218-4a9d-9aee-d50003d1badb"
+        ],
+        "leads": [],
+        "evidence": [
+          {
+            "ad_id": "8873b3b7-6fb2-4e18-b436-442268ff1477",
+            "source": "spoken",
+            "quote": "60-day money-back guarantee"
+          },
+          {
+            "ad_id": "27ba1684-9218-4a9d-9aee-d50003d1badb",
+            "source": "spoken",
+            "quote": "60-day money-back guarantee"
+          },
+          {
+            "ad_id": "27ba1684-9218-4a9d-9aee-d50003d1badb",
+            "source": "copy",
+            "quote": "Try it for 60 days, full refund if nothing shifts."
+          }
+        ]
+      }
+    }
+  ],
+  "steal_this": [
+    {
+      "ad_id": "8873b3b7-6fb2-4e18-b436-442268ff1477",
+      "template": "Open on an everyday slip-up, then blame the cause, not the person.",
+      "dont_copy": "Skip their \"You've tried everything.\" caption. It's theirs."
+    },
+    {
+      "ad_id": "27ba1684-9218-4a9d-9aee-d50003d1badb",
+      "template": "Let people try it for a set number of days, with a full refund if nothing changes.",
+      "dont_copy": "Skip the pink pouch and scoop shot. That look is theirs."
+    }
+  ],
+  "citations_ok": true
+}
