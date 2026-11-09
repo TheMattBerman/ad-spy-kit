@@ -89,9 +89,7 @@ git clone https://github.com/TheMattBerman/ad-spy-kit.git ad-spy-kit && cd ad-sp
 bash doctor.sh          # checks Python, the browser, and which data path you have
 ```
 
-That URL is the public repo's name at launch. Cloning from a private invite instead? Put
-that URL in the same command: the trailing `ad-spy-kit` names the folder either way, so
-the paths in this README match. `./install.sh` tells you what it replaced and whether
+`./install.sh` tells you what it replaced and whether
 Chromium installed. If `~/.claude/skills/ad-spy-kit` already links to a different checkout,
 it stops and leaves it alone; rerun with `--force` to switch.
 
